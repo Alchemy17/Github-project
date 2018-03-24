@@ -1,40 +1,51 @@
 <div *ngIf='records'>
-<div class="panel panel-default"><div class="panel-heading">
-  {{records.name}}<small>{{records.login}}</small>
-  <span *ngIf='records.company'>, Currently works at {{records.company}} </span>
-  {{records.location}}
-</div>
-<div class="panel-body"></div>
-  <div class="row">
-    <div class="col-md-3">
-      <img src="{{records.avatar_url}}" class="img-circle img-responsive" 
-      alt="User Image">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      {{records.name}}<small>({{records.login}})</small>
+      <span *ngIf='records.company'>, Currently works at {{records.company}} </span>
+      {{records.location}}
     </div>
-    <div class="col-md-5">
-      <ul class="list-group">
-        <li class="list-group-item" * ngIf="records.blog"><a href="
-          {{records.blog}}" target='_blank'></a>
-        </li>
-        <li class="list-group-item" * ngIf="records.hireable">
-          {{records.hireable}}
-        </li>
-          <li class="list-group-item" * ngIf="records.email">
-            {{records.email}}
-          </li>
-      </ul>
-    </div>
-    <div class="col-md-4">
-      <div>
-        <p>
-          <span class="label label-success">{{records.followers}}Followers</span>
-          <span class="label label-success">{{records.following}}Following</span>
-          <span class="label label-info">{{records.public_repos}}Public Repos</span>
-        </p>
-        <p><a href="{{records.html_url}}" target="_blank" class="btn btn-success bt-sm">Github Profile</a></p>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="{{records.avatar_url}}" class="img-circle img-responsive" 
+          alt="User Image">
+        </div>
+        <div class="col-md-5">
+          <ul class="list-group">
+            <li class="list-group-item" *ngIf="records.blog"><a href="
+              {{records.blog}}" target='_blank'></a>
+            </li>
+            <li class="list-group-item" *ngIf="records.hireable">
+              {{records.hireable}}
+            </li>
+            <li class="list-group-item" *ngIf="records.email">
+              {{records.email}}
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <div>
+            <p>
+              <span class="label label-success">{{records.followers}}Followers</span>
+              <span class="label label-success">{{records.following}}Following</span>
+              <span class="label label-info">{{records.public_repos}}Public Repos</span>
+            </p>
+            <p><a href="{{records.html_url}}" target="_blank" class="btn btn-success bt-sm">Github Profile</a></p>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Repositories</h3>
+              </div>
+              <div class="panel-body" *ngFor='let repo of repos'>
+                <p class="clearfix">
+                  {{repo.name}} <a href="{{repo.html_url}}"></a>
+                </p>
+                <p>{{repo.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-</div>
-
 </div>
