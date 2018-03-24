@@ -13,20 +13,18 @@ username: string;
 
   constructor(private recordsService: RecordsService) {
    }
-
    findRecords() {
      this.recordsService.updateRecord(this.username);
      this.recordsService.getRecordData().subscribe(records => {
-       /* console.log(records); */
+       console.log(records);
        this.records = records;
      });
 
      this.recordsService.getUserRepos().subscribe(repos => {
-       /* console.log(repos); */
+       console.log(repos);
        this.repos = repos;
      });
    }
-
   ngOnInit() {
   }
 
