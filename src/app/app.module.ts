@@ -12,11 +12,11 @@ import { RecordComponent } from './record/record.component';
 @NgModule({
   declarations: [
     AppComponent,
-    RecordComponent,
-    HttpModule
+    RecordComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
   providers: [RecordsService],
   bootstrap: [AppComponent]

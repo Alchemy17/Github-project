@@ -8,7 +8,7 @@ export class RecordsService {
   private username: string;
   private clientid = 'f1d7b7788e46862e77dc';
   private clientsecret = '54f68381e8556513ef2a663fe4d5d8eab5235e52';
-  
+
   constructor(private http: Http) {
     console.log('Service working...');
 this.username = 'alexkarari';
