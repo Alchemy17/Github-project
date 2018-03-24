@@ -24,4 +24,8 @@ getUserRepos() {
     + this.clientid + '&client_secret=' + this.clientsecret)
     .map(res => res.json());
 }
+
+  updateRecord(username: string) {
+    this.username = username;
+  }
 }
