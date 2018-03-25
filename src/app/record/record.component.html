@@ -6,16 +6,16 @@
   </div>
 </form>
 <div *ngIf='records'>
-  <div class="panel panel-default">
-    <div class="panel-heading">
+  <div class="card card-default">
+    <div class="card-heading">
       {{records.name}}<small>({{records.login}})</small>
       <span *ngIf='records.company'>, Currently works at {{records.company}} </span>
       {{records.location}}
     </div>
-    <div class="panel-body">
+    <div class="card-body">
       <div class="row">
         <div class="col-md-3">
-          <img src="{{records.avatar_url}}" class="img-circle img-responsive" 
+          <img src="{{records.avatar_url}}" class="img-circle img-fluid" 
           alt="User Image">
         </div>
         <div class="col-md-5">
@@ -39,11 +39,11 @@
               <span class="label label-info">{{records.public_repos}}Public Repos</span>
             </p>
             <p><a href="{{records.html_url}}" target="_blank" class="btn btn-success bt-sm">Github Profile</a></p>
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                <h3 class="panel-title">Repositories</h3>
+            <div class="card card-default">
+              <div class="card-heading">
+                <h3 class="card-title">Repositories</h3>
               </div>
-              <div class="panel-body" *ngFor='let repo of repos'>
+              <div class="card-body" *ngFor='let repo of repos'>
                 <p class="clearfix">
                   {{repo.name}} <a href="{{repo.html_url}}"></a>
                 </p>
