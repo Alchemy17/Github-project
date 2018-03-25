@@ -5,7 +5,9 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 
 import { RecordsService } from './records.service';
-
+import { HttpClientModule } from '@angular/common/http';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpModule } from '@ngx-progressbar/http';
 
 import { AppComponent } from './app.component';
 import { RecordComponent } from './record/record.component';
@@ -19,7 +21,10 @@ import { RecordComponent } from './record/record.component';
   imports: [
     BrowserModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    NgProgressModule.forRoot(),
+    NgProgressHttpModule
   ],
   providers: [RecordsService],
   bootstrap: [AppComponent]

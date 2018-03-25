@@ -1,3 +1,5 @@
+<ng-progress></ng-progress>
+
 <form action="" class="search">
   <div class="form-control">
     <label for="username">Github Username</label>
@@ -6,8 +8,8 @@
   </div>
 </form>
 <div *ngIf='records'>
-  <div class="card card-default">
-    <div class="card-heading">
+  <div class="card">
+    <div class="card-header">
       {{records.name}}<small>({{records.login}})</small>
       <span *ngIf='records.company'>, Currently works at {{records.company}} </span>
       {{records.location}}
@@ -15,18 +17,18 @@
     <div class="card-body">
       <div class="row">
         <div class="col-md-3">
-          <img src="{{records.avatar_url}}" class="img-circle img-fluid" 
+          <img src="{{records.avatar_url}}" class="rounded img-fluid" 
           alt="User Image">
         </div>
         <div class="col-md-5">
           <ul class="list-group">
-            <li class="list-group-item" *ngIf="records.blog"><a href="
+            <li class="list-group-item-action" *ngIf="records.blog"><a href="
               {{records.blog}}" target='_blank'></a>
             </li>
-            <li class="list-group-item" *ngIf="records.hireable">
+            <li class="list-group-item-action" *ngIf="records.hireable">
               {{records.hireable}}
             </li>
-            <li class="list-group-item" *ngIf="records.email">
+            <li class="list-group-item-action" *ngIf="records.email">
               {{records.email}}
             </li>
           </ul>
@@ -34,13 +36,13 @@
         <div class="col-md-4">
           <div>
             <p>
-              <span class="label label-success">{{records.followers}}Followers</span>
-              <span class="label label-success">{{records.following}}Following</span>
-              <span class="label label-info">{{records.public_repos}}Public Repos</span>
+              <span class="badge badge-success">{{records.followers}}Followers</span>
+              <span class="badge badge-success">{{records.following}}Following</span>
+              <span class="badge badge-info">{{records.public_repos}}Public Repos</span>
             </p>
             <p><a href="{{records.html_url}}" target="_blank" class="btn btn-success bt-sm">Github Profile</a></p>
             <div class="card card-default">
-              <div class="card-heading">
+              <div class="card-header">
                 <h3 class="card-title">Repositories</h3>
               </div>
               <div class="card-body" *ngFor='let repo of repos'>
