@@ -11,12 +11,14 @@ import { NgProgressHttpModule } from '@ngx-progressbar/http';
 
 import { AppComponent } from './app.component';
 import { RecordComponent } from './record/record.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RecordComponent
+    RecordComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
