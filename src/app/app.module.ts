@@ -12,6 +12,12 @@ import { NgProgressHttpModule } from '@ngx-progressbar/http';
 import { AppComponent } from './app.component';
 import { RecordComponent } from './record/record.component';
 import { AboutComponent } from './about/about.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'record', component: RecordComponent },
+  { path: 'about', component: AboutComponent }
+]
 
 
 @NgModule({
@@ -26,7 +32,8 @@ import { AboutComponent } from './about/about.component';
     FormsModule,
     HttpClientModule,
     NgProgressModule.forRoot(),
-    NgProgressHttpModule
+    NgProgressHttpModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [RecordsService],
   bootstrap: [AppComponent]
