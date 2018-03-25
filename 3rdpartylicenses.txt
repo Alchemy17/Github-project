@@ -118,6 +118,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 MIT
 MIT
 
+@angular/common@5.2.9
+MIT
+MIT
+
 @angular/platform-browser@5.2.9
 MIT
 MIT
@@ -130,7 +134,15 @@ MIT
 MIT
 MIT
 
-@angular/common@5.2.9
+@ngx-progressbar/core@4.1.1
+MIT
+MIT
+
+@ngx-progressbar/http@4.1.1
+MIT
+MIT
+
+@angular/router@5.2.9
 MIT
 MIT
 
