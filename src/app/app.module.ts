@@ -14,6 +14,7 @@ import { RecordComponent } from './record/record.component';
 import { AboutComponent } from './about/about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
   { path: 'record', component: RecordComponent },
@@ -28,7 +29,8 @@ const routes: Routes = [
     AppComponent,
     RecordComponent,
     AboutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
